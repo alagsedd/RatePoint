@@ -1,0 +1,694 @@
+/* Support.module.css - RatePoint Ghana Municipal Platform */
+
+.container {
+  min-height: 100vh;
+  background: #0a0a0a;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  padding: 120px 2rem 80px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 102, 51, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 204, 0, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(206, 17, 38, 0.1) 0%, transparent 50%);
+  animation: backgroundShift 8s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.heroContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(0, 102, 51, 0.2), rgba(255, 204, 0, 0.2));
+  color: #66cc99;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  border: 1px solid rgba(0, 102, 51, 0.3);
+  backdrop-filter: blur(20px);
+  animation: slideInUp 0.6s ease-out;
+}
+
+.heroTitle {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #66cc99 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #006633, #ffcc00, #ce1126);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin-top: 8px;
+}
+
+.heroSubtitle {
+  font-size: 20px;
+  color: #d1d5db;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  animation: slideInUp 1s ease-out;
+}
+
+.supportStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.stat {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.statNumber {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #006633, #00a651);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+/* Hero Visual */
+.heroVisual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 560px;
+}
+
+.floatingCard {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 32px;
+  width: 320px;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  animation: float 6s ease-in-out infinite;
+  position: relative;
+  z-index: 3;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-20px) rotate(2deg); 
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.cardAvatar {
+  font-size: 32px;
+  background: linear-gradient(135deg, #006633, #00a651);
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 102, 51, 0.3);
+}
+
+.userName {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.userRole {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.supportOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(8px);
+}
+
+.optionIcon {
+  font-size: 24px;
+  background: rgba(0, 102, 51, 0.15);
+  padding: 12px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.optionTitle {
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.optionSubtitle {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.floatingElement1,
+.floatingElement2,
+.floatingElement3 {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #006633, #ffcc00);
+  opacity: 0.1;
+  filter: blur(40px);
+  animation: floatElement 8s ease-in-out infinite;
+}
+
+.floatingElement1 {
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.floatingElement2 {
+  width: 80px;
+  height: 80px;
+  bottom: 20%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.floatingElement3 {
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  right: 5%;
+  animation-delay: 4s;
+}
+
+@keyframes floatElement {
+  0%, 100% { 
+    transform: translateY(0px) scale(1); 
+    opacity: 0.1;
+  }
+  50% { 
+    transform: translateY(-30px) scale(1.1); 
+    opacity: 0.15;
+  }
+}
+
+/* Contact Section */
+.contactSection {
+  padding: 100px 2rem;
+  background: #0a0a0a;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.sectionTitle {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #66cc99 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.sectionSubtitle {
+  font-size: 20px;
+  color: #9ca3af;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contactCard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 32px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.contactCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 102, 51, 0.1), transparent);
+  transition: left 0.6s;
+}
+
+.contactCard:hover::before {
+  left: 100%;
+}
+
+.contactCard:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 102, 51, 0.4);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(0, 102, 51, 0.1);
+}
+
+.contactIcon {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 102, 51, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 32px;
+  border: 2px solid rgba(0, 102, 51, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contactCard:hover .contactIcon {
+  background: rgba(0, 102, 51, 0.25);
+  transform: scale(1.1);
+}
+
+.contactTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.contactDescription {
+  color: #9ca3af;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.contactFeatures {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.feature {
+  background: rgba(0, 102, 51, 0.15);
+  color: #66cc99;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 102, 51, 0.3);
+}
+
+.contactInfo {
+  margin-bottom: 24px;
+}
+
+.contactItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contactLabel {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.contactValue {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.contactButton {
+  background: linear-gradient(135deg, #006633, #00a651);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 102, 51, 0.4);
+}
+
+.contactButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 102, 51, 0.6);
+}
+
+/* FAQ Section */
+.faqSection {
+  padding: 100px 2rem;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faqCategory {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+}
+
+.categoryTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(0, 102, 51, 0.5);
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faqItem {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 102, 51, 0.3);
+}
+
+.faqQuestion {
+  padding: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.faqAnswer {
+  padding: 0 20px 20px;
+  color: #9ca3af;
+  line-height: 1.6;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Emergency Section */
+.emergencySection {
+  padding: 80px 2rem;
+  background: #0a0a0a;
+}
+
+.emergencyCard {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(206, 17, 38, 0.1), rgba(255, 204, 0, 0.1));
+  border-radius: 24px;
+  padding: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(206, 17, 38, 0.3);
+  backdrop-filter: blur(20px);
+}
+
+.emergencyContent {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.emergencyIcon {
+  font-size: 48px;
+  background: rgba(206, 17, 38, 0.2);
+  padding: 20px;
+  border-radius: 16px;
+  border: 2px solid rgba(206, 17, 38, 0.4);
+}
+
+.emergencyTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.emergencyDescription {
+  color: #d1d5db;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.emergencyButton {
+  background: linear-gradient(135deg, #ce1126, #ff6b6b);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(206, 17, 38, 0.4);
+  white-space: nowrap;
+}
+
+.emergencyButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(206, 17, 38, 0.6);
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+  
+  .heroTitle {
+    font-size: 48px;
+  }
+  
+  .supportStats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 1rem 60px;
+  }
+  
+  .heroTitle {
+    font-size: 40px;
+  }
+  
+  .sectionTitle {
+    font-size: 36px;
+  }
+  
+  .supportStats {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .emergencyCard {
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .emergencyContent {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+  
+  .sectionTitle {
+    font-size: 28px;
+  }
+  
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .heroVisual {
+    height: 400px;
+  }
+  
+  .floatingCard {
+    width: 280px;
+    padding: 24px;
+  }
+  
+  .emergencyTitle {
+    font-size: 24px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .contactCard:hover,
+  .option:hover,
+  .faqItem:hover {
+    transform: none;
+  }
+  
+  .contactButton:hover,
+  .emergencyButton:hover {
+    transform: none;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .floatingCard,
+  .floatingElement1,
+  .floatingElement2,
+  .floatingElement3,
+  .heroBackground {
+    animation: none;
+  }
+  
+  .contactCard:hover,
+  .option:hover,
+  .faqItem:hover {
+    transform: none;
+  }
+}

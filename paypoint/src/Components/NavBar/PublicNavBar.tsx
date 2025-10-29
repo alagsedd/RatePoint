@@ -65,7 +65,7 @@ const PublicNavBar = ({ onLogin }: PublicNavBarProps) => {
 
   const navigation: NavigationItem[] = [
     { name: "Pay Bill", href: "/find-property", highlight: true, type: "link" },
-    { name: "Property Owners", href: "/property-owners", type: "link" },
+    { name: "Property Owners", href: "/find-property", type: "link" },
     { name: "Collectors", href: "/collectors", type: "link" },
     { name: "Municipalities", href: "/municipalities", type: "link" },
     { name: "Support", href: "/support", type: "link" },

@@ -1,0 +1,493 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  color: #66cc99;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.backButton:hover {
+  color: #00a651;
+  transform: translateX(-2px);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #66cc99 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #9ca3af;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.errorAlert {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.errorIcon {
+  font-size: 1rem;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.select,
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.select:focus,
+.input:focus {
+  outline: none;
+  border-color: #006633;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 3px rgba(0, 102, 51, 0.1);
+}
+
+.select option {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.inputHint {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+.features {
+  background: rgba(0, 102, 51, 0.1);
+  border: 1px solid rgba(0, 102, 51, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #66cc99;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.featureItem:last-child {
+  margin-bottom: 0;
+}
+
+.featureIcon {
+  font-size: 1rem;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.rememberForgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.rememberMe {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #d1d5db;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.rememberMe input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #006633;
+}
+
+.forgotPassword {
+  background: none;
+  border: none;
+  color: #66cc99;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.forgotPassword:hover {
+  color: #00a651;
+  text-decoration: underline;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #006633, #00a651);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, #008844, #00cc66);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 102, 51, 0.3);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.offlineSection {
+  text-align: center;
+}
+
+.offlineDivider {
+  position: relative;
+  margin: 1.5rem 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.offlineDivider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.offlineDivider span {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.offlineButton {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.offlineButton:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.offlineIcon {
+  font-size: 1.1rem;
+}
+
+.offlineHint {
+  font-size: 0.8rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.footer {
+  width: 100%;
+  max-width: 400px;
+}
+
+.helpSection {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.helpTitle {
+  color: #e5e7eb;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.helpText {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+.contactIcon {
+  font-size: 1rem;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.roleHint {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.switchRole {
+  background: none;
+  border: none;
+  color: #66cc99;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.switchRole:hover {
+  color: #00a651;
+  text-decoration: underline;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal {
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal p {
+  color: #9ca3af;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.modalFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.modalFeature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #66cc99;
+  font-size: 0.9rem;
+  justify-content: center;
+}
+
+.modalIcon {
+  font-size: 1.2rem;
+  width: 2rem;
+  text-align: center;
+}
+
+.modalActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.modalSecondary,
+.modalPrimary {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modalSecondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e5e7eb;
+}
+
+.modalSecondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.modalPrimary {
+  background: linear-gradient(135deg, #006633, #00a651);
+  color: white;
+}
+
+.modalPrimary:hover {
+  background: linear-gradient(135deg, #008844, #00cc66);
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .form {
+    padding: 1.5rem;
+  }
+  
+  .rememberForgot {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .modalActions {
+    flex-direction: column;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .backButton,
+  .submitButton,
+  .forgotPassword,
+  .switchRole,
+  .offlineButton,
+  .modalPrimary {
+    transition: none;
+  }
+  
+  .spinner {
+    animation: none;
+  }
+}

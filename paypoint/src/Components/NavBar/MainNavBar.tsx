@@ -28,15 +28,20 @@ const MainNavBar = () => {
     const userData = localStorage.getItem("ratepoint_user");
     const token = localStorage.getItem("ratepoint_token");
 
+    console.log("🔍 Auth Check:", { userData, token }); // DEBUG
+
     if (userData && token) {
       try {
         const parsedUser: User = JSON.parse(userData);
         setUser(parsedUser);
         setIsAuthenticated(true);
+        console.log("✅ User authenticated:", parsedUser); // DEBUG
       } catch (error) {
         console.error("Error parsing user data:", error);
         clearAuthData();
       }
+    } else {
+      console.log("❌ No user data found"); // DEBUG
     }
 
     setIsLoading(false);
@@ -59,11 +64,13 @@ const MainNavBar = () => {
     localStorage.setItem("ratepoint_user", JSON.stringify(userData));
     setUser(userData);
     setIsAuthenticated(true);
+    console.log("🔐 User logged in:", userData); // DEBUG
   };
 
   // Handle user logout
   const handleLogout = (): void => {
     clearAuthData();
+    console.log("🚪 User logged out"); // DEBUG
     // Optional: Redirect to home page after logout
     if (window.location.pathname !== "/") {
       window.location.href = "/";
@@ -72,6 +79,7 @@ const MainNavBar = () => {
 
   // Show loading state while checking authentication
   if (isLoading) {
+    console.log("⏳ Loading..."); // DEBUG
     return (
       <nav className={styles.loadingNavbar}>
         <div className={styles.loadingContainer}>
@@ -87,13 +95,25 @@ const MainNavBar = () => {
     );
   }
 
+  console.log("🎯 Rendering:", { isAuthenticated, user }); // DEBUG
+
   // Return appropriate navbar based on authentication status
   return (
     <>
       {isAuthenticated && user ? (
-        <AuthenticatedNavBar user={user} onLogout={handleLogout} />
+        <>
+          <AuthenticatedNavBar user={user} onLogout={handleLogout} />
+          <div style={{background: 'red', color: 'white', padding: '10px', textAlign: 'center'}}>
+            DEBUG: Authenticated Navbar Showing
+          </div>
+        </>
       ) : (
-        <PublicNavBar onLogin={handleLogin} />
+        <>
+          <PublicNavBar onLogin={handleLogin} />
+          <div style={{background: 'blue', color: 'white', padding: '10px', textAlign: 'center'}}>
+            DEBUG: Public Navbar Showing
+          </div>
+        </>
       )}
     </>
   );

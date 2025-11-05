@@ -65,7 +65,6 @@ const PublicNavBar = ({ onLogin }: PublicNavBarProps) => {
 
   const navigation: NavigationItem[] = [
     { name: "Pay Bill", href: "/find-property", highlight: true, type: "link" },
-    { name: "Property Owners", href: "/find-property", type: "link" },
     { name: "Collectors", href: "/collectors", type: "link" },
     { name: "Municipalities", href: "/municipalities", type: "link" },
     { name: "Support", href: "/support", type: "link" },
@@ -198,27 +197,48 @@ const PublicNavBar = ({ onLogin }: PublicNavBarProps) => {
             {showRoleMenu && (
               <div className={styles.loginDropdown}>
                 <div className={styles.loginHeader}>Sign In As:</div>
-                <button
+                {/* Using Link components for auth pages */}
+                <Link
+                  to="/auth/property-owner"
                   className={styles.roleOption}
-                  onClick={() => handleRoleLogin("Property Owner")}
+                  onClick={() => setShowRoleMenu(false)}
                 >
                   <span className={styles.roleIcon}>👤</span>
                   Property Owner
-                </button>
-                <button
+                </Link>
+                <Link
+                  to="/auth/collector"
                   className={styles.roleOption}
-                  onClick={() => handleRoleLogin("Rate Collector")}
+                  onClick={() => setShowRoleMenu(false)}
                 >
                   <span className={styles.roleIcon}>📱</span>
                   Rate Collector
-                </button>
-                <button
+                </Link>
+                <Link
+                  to="/auth/municipal"
                   className={styles.roleOption}
-                  onClick={() => handleRoleLogin("Municipal Staff")}
+                  onClick={() => setShowRoleMenu(false)}
                 >
                   <span className={styles.roleIcon}>🏢</span>
                   Municipal Staff
-                </button>
+                </Link>
+                {/* Demo login button */}
+                <div
+                  style={{
+                    borderTop: "1px solid rgba(255,255,255,0.1)",
+                    marginTop: "0.5rem",
+                    paddingTop: "0.5rem",
+                  }}
+                >
+                  <button
+                    className={styles.roleOption}
+                    onClick={() => handleRoleLogin("Property Owner")}
+                    style={{ color: "#9ca3af", fontSize: "0.8rem" }}
+                  >
+                    <span className={styles.roleIcon}>🚀</span>
+                    Quick Demo
+                  </button>
+                </div>
               </div>
             )}
           </div>
@@ -306,30 +326,33 @@ const PublicNavBar = ({ onLogin }: PublicNavBarProps) => {
             </button>
           </div>
 
-          {/* Mobile Login Options */}
+          {/* Mobile Login Options with Links */}
           <div className={styles.mobileLoginSection}>
             <h4 className={styles.mobileSectionTitle}>Sign In As</h4>
-            <button
+            <Link
+              to="/auth/property-owner"
               className={styles.mobileRoleButton}
-              onClick={() => handleRoleLogin("Property Owner")}
+              onClick={() => setIsMenuOpen(false)}
             >
               <span className={styles.mobileRoleIcon}>👤</span>
               Property Owner
-            </button>
-            <button
+            </Link>
+            <Link
+              to="/auth/collector"
               className={styles.mobileRoleButton}
-              onClick={() => handleRoleLogin("Rate Collector")}
+              onClick={() => setIsMenuOpen(false)}
             >
               <span className={styles.mobileRoleIcon}>📱</span>
               Rate Collector
-            </button>
-            <button
+            </Link>
+            <Link
+              to="/auth/municipal"
               className={styles.mobileRoleButton}
-              onClick={() => handleRoleLogin("Municipal Staff")}
+              onClick={() => setIsMenuOpen(false)}
             >
               <span className={styles.mobileRoleIcon}>🏢</span>
               Municipal Staff
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Contact Section */}

@@ -52,43 +52,15 @@ const AuthenticatedNavBar = ({ user, onLogout }: AuthenticatedNavBarProps) => {
     };
   }, []);
 
-  // Get user data from localStorage with fallback
-  const getUserData = (): User => {
-    try {
-      const userData = localStorage.getItem("ratepoint_user");
-      return userData
-        ? JSON.parse(userData)
-        : {
-            name: "Kwame Mensah",
-            role: "Property Owner",
-            avatar: "👤",
-            phone: "+233 XX XXX XXXX",
-            dashboard: "/dashboard",
-          };
-    } catch {
-      return {
-        name: "Kwame Mensah",
-        role: "Property Owner",
-        avatar: "👤",
-        phone: "+233 XX XXX XXXX",
-        dashboard: "/dashboard",
-      };
-    }
-  };
+  const currentUser: User = user;
 
-  const currentUser: User = user || getUserData();
-
+  // SIMPLIFIED: Only use routes that actually exist
   const navigation: NavigationItem[] = [
     { name: "Dashboard", href: "/dashboard", current: true, icon: "📊" },
-    {
-      name: "Find Property",
-      href: "/properties/search",
-      current: false,
-      icon: "🔍",
-    },
-    { name: "My Properties", href: "/properties", current: false, icon: "🏠" },
-    { name: "Bills", href: "/bills", current: false, icon: "🧾" },
-    { name: "History", href: "/history", current: false, icon: "📈" },
+    { name: "Find Property", href: "/find-property", current: false, icon: "🔍" },
+    { name: "Collectors", href: "/collectors", current: false, icon: "📱" },
+    { name: "Municipalities", href: "/municipalities", current: false, icon: "🏢" },
+    { name: "Support", href: "/support", current: false, icon: "💬" },
   ];
 
   const handleLogoutClick = (): void => {
@@ -162,7 +134,7 @@ const AuthenticatedNavBar = ({ user, onLogout }: AuthenticatedNavBarProps) => {
               </span>
             </button>
 
-            {/* Dropdown Menu */}
+            {/* Dropdown Menu - SIMPLIFIED: Only use existing routes */}
             {isUserMenuOpen && (
               <div className={styles.dropdownMenu}>
                 <div className={styles.dropdownHeader}>
@@ -185,35 +157,14 @@ const AuthenticatedNavBar = ({ user, onLogout }: AuthenticatedNavBarProps) => {
                 <div className={styles.dropdownDivider}></div>
 
                 <div className={styles.dropdownItems}>
-                  <Link to="/profile" className={styles.dropdownItem}>
-                    <span className={styles.dropdownIcon}>👤</span>
-                    <span className={styles.dropdownText}>My Profile</span>
+                  <Link to="/find-property" className={styles.dropdownItem}>
+                    <span className={styles.dropdownIcon}>🔍</span>
+                    <span className={styles.dropdownText}>Find Property</span>
                   </Link>
 
-                  <Link to="/receipts" className={styles.dropdownItem}>
-                    <span className={styles.dropdownIcon}>🧾</span>
-                    <span className={styles.dropdownText}>
-                      Payment Receipts
-                    </span>
-                  </Link>
-
-                  <Link to="/properties" className={styles.dropdownItem}>
-                    <span className={styles.dropdownIcon}>🏠</span>
-                    <span className={styles.dropdownText}>My Properties</span>
-                  </Link>
-                </div>
-
-                <div className={styles.dropdownDivider}></div>
-
-                <div className={styles.dropdownItems}>
                   <Link to="/support" className={styles.dropdownItem}>
                     <span className={styles.dropdownIcon}>💬</span>
                     <span className={styles.dropdownText}>Help & Support</span>
-                  </Link>
-
-                  <Link to="/settings" className={styles.dropdownItem}>
-                    <span className={styles.dropdownIcon}>⚙️</span>
-                    <span className={styles.dropdownText}>Settings</span>
                   </Link>
                 </div>
 
@@ -249,7 +200,7 @@ const AuthenticatedNavBar = ({ user, onLogout }: AuthenticatedNavBarProps) => {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile Navigation Menu - SIMPLIFIED */}
       <div
         className={`${styles.mobileMenu} ${isMenuOpen ? styles.active : ""}`}
       >
@@ -283,13 +234,9 @@ const AuthenticatedNavBar = ({ user, onLogout }: AuthenticatedNavBarProps) => {
           <div className={styles.mobileMenuDivider}></div>
 
           <div className={styles.mobileSecondaryLinks}>
-            <Link to="/profile" className={styles.mobileSecondaryLink}>
-              <span className={styles.mobileLinkIcon}>👤</span>
-              My Profile
-            </Link>
-            <Link to="/receipts" className={styles.mobileSecondaryLink}>
-              <span className={styles.mobileLinkIcon}>🧾</span>
-              Payment Receipts
+            <Link to="/find-property" className={styles.mobileSecondaryLink}>
+              <span className={styles.mobileLinkIcon}>🔍</span>
+              Find Property
             </Link>
             <Link to="/support" className={styles.mobileSecondaryLink}>
               <span className={styles.mobileLinkIcon}>💬</span>

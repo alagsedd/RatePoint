@@ -41,7 +41,8 @@ const CollectorAuth = () => {
         // Redirect to collector dashboard
         navigate("/collectors/dashboard");
       }, 1500);
-    } catch (err) {
+    } catch {
+      // Fixed: Removed unused 'err' parameter
       setIsLoading(false);
       setError("Invalid credentials. Please check your username and password.");
     }
@@ -60,12 +61,13 @@ const CollectorAuth = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div
+        <button
+          type="button"
           className={styles.backButton}
           onClick={() => navigate("/auth/role-selection")}
         >
           ← Back
-        </div>
+        </button>
         <h1 className={styles.title}>Field Collector Login</h1>
         <p className={styles.subtitle}>
           Access your field collection tools and property registration
@@ -234,6 +236,7 @@ const CollectorAuth = () => {
         <div className={styles.roleHint}>
           <span>Not a field collector? </span>
           <button
+            type="button"
             className={styles.switchRole}
             onClick={() => navigate("/auth/role-selection")}
           >
@@ -268,12 +271,14 @@ const CollectorAuth = () => {
             </div>
             <div className={styles.modalActions}>
               <button
+                type="button"
                 className={styles.modalSecondary}
                 onClick={() => setShowOfflineMode(false)}
               >
                 Go Back
               </button>
               <button
+                type="button"
                 className={styles.modalPrimary}
                 onClick={() => navigate("/collectors/dashboard?offline=true")}
               >

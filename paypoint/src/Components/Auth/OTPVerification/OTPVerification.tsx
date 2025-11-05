@@ -9,6 +9,7 @@ const OTPVerification = () => {
   const [countdown, setCountdown] = useState<number>(60);
   const [canResend, setCanResend] = useState<boolean>(false);
   
+  // Fix: Properly type the ref array
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
   const navigate = useNavigate();
   const location = useLocation();
@@ -43,6 +44,11 @@ const OTPVerification = () => {
 
     return () => clearInterval(timer);
   }, []);
+
+  // Fix: Proper ref callback function
+  const setInputRef = (index: number) => (el: HTMLInputElement | null) => {
+    inputRefs.current[index] = el;
+  };
 
   const handleOtpChange = (index: number, value: string) => {
     // Only allow numbers
@@ -178,9 +184,13 @@ const OTPVerification = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.backButton} onClick={() => navigate('/auth/property-owner')}>
+        <button
+          type="button"
+          className={styles.backButton}
+          onClick={() => navigate('/auth/property-owner')}
+        >
           ← Back
-        </div>
+        </button>
         <h1 className={styles.title}>Verify Your Identity</h1>
         <p className={styles.subtitle}>
           Enter the 6-digit code sent to your phone
@@ -219,7 +229,7 @@ const OTPVerification = () => {
             {otp.map((digit, index) => (
               <input
                 key={index}
-                ref={(el) => (inputRefs.current[index] = el)}
+                ref={setInputRef(index)} {/* Fix: Use the proper ref callback */}
                 type="text"
                 inputMode="numeric"
                 pattern="[0-9]*"
@@ -281,6 +291,7 @@ const OTPVerification = () => {
         
         <div className={styles.contactSupport}>
           <button 
+            type="button"
             className={styles.supportButton}
             onClick={() => navigate('/support')}
           >

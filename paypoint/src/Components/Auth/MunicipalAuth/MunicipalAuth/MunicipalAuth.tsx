@@ -41,7 +41,8 @@ const MunicipalAuth = () => {
         // Redirect to municipal dashboard
         navigate("/municipalities/dashboard");
       }, 1500);
-    } catch (err) {
+    } catch {
+      // Fixed: Removed unused 'err' parameter
       setIsLoading(false);
       setError("Invalid credentials. Please check your email and password.");
     }
@@ -55,12 +56,13 @@ const MunicipalAuth = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div
+        <button
+          type="button"
           className={styles.backButton}
           onClick={() => navigate("/auth/role-selection")}
         >
           ← Back
-        </div>
+        </button>
         <h1 className={styles.title}>Municipal Staff Portal</h1>
         <p className={styles.subtitle}>
           Access your municipal administration dashboard
@@ -193,6 +195,7 @@ const MunicipalAuth = () => {
         <div className={styles.roleHint}>
           <span>Not a municipal staff? </span>
           <button
+            type="button"
             className={styles.switchRole}
             onClick={() => navigate("/auth/role-selection")}
           >

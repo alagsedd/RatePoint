@@ -10,44 +10,44 @@ const PublicHomePage = () => {
           <div className={styles.heroText}>
             <div className={styles.badge}>
               <span className={styles.badgeIcon}>🏠</span>
-              Ghana Municipal Property Rates Platform
+              Ghana's Digital Property Rates Platform
             </div>
             <h1 className={styles.heroTitle}>
-              Digital Property Rate
-              <span className={styles.highlight}> Payments Made Simple</span>
+              Property Rate Payments
+              <span className={styles.highlight}> Made Simple</span>
             </h1>
             <p className={styles.heroSubtitle}>
-              Pay your municipal property rates instantly using your Ghana Card
-              and phone number. Secure mobile money and card payments with
-              instant digital receipts.
+              Pay your municipal property rates quickly and securely using your
+              Ghana Card and phone number. Get instant receipts and track your
+              payments all in one place.
             </p>
             <div className={styles.ctaButtons}>
               <button className={styles.primaryButton}>
                 <span className={styles.buttonIcon}>📱</span>
-                Pay with Mobile Money
+                Pay Your Rates Now
                 <span className={styles.buttonArrow}>→</span>
               </button>
               <button className={styles.secondaryButton}>
                 <span className={styles.buttonIcon}>👨‍💼</span>
-                Field Collector Login
+                Collector Login
               </button>
             </div>
 
-            {/* Trust Badges - Aligned with specifications */}
+            {/* Trust Indicators */}
             <div className={styles.trustBadges}>
               <div className={styles.trustItem}>
                 <div className={styles.trustIcon}>🆔</div>
                 <div className={styles.trustText}>
                   <div className={styles.trustTitle}>Ghana Card Verified</div>
                   <div className={styles.trustSubtitle}>
-                    Secure Authentication
+                    Your identity is protected
                   </div>
                 </div>
               </div>
               <div className={styles.trustItem}>
                 <div className={styles.trustIcon}>🛡️</div>
                 <div className={styles.trustText}>
-                  <div className={styles.trustTitle}>PCI-DSS Compliant</div>
+                  <div className={styles.trustTitle}>Secure Payments</div>
                   <div className={styles.trustSubtitle}>
                     Powered by Paystack
                   </div>
@@ -56,16 +56,14 @@ const PublicHomePage = () => {
               <div className={styles.trustItem}>
                 <div className={styles.trustIcon}>📄</div>
                 <div className={styles.trustText}>
-                  <div className={styles.trustTitle}>
-                    Instant Digital Receipts
-                  </div>
-                  <div className={styles.trustSubtitle}>Downloadable PDF</div>
+                  <div className={styles.trustTitle}>Digital Receipts</div>
+                  <div className={styles.trustSubtitle}>Download anytime</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Hero Visual - Property Owner Dashboard Preview */}
+          {/* Dashboard Preview */}
           <div className={styles.heroVisual}>
             <div className={styles.floatingCard}>
               <div className={styles.cardHeader}>
@@ -78,13 +76,11 @@ const PublicHomePage = () => {
                 </div>
               </div>
               <div className={styles.cardBalance}>
-                <div className={styles.balanceLabel}>Current Bill Due</div>
+                <div className={styles.balanceLabel}>Amount Due</div>
                 <div className={styles.balanceAmount}>GH₵ 450.00</div>
                 <div className={styles.balanceDetails}>
-                  <span className={styles.detailItem}>
-                    Rateable Value: GH₵ 15,000
-                  </span>
-                  <span className={styles.detailItem}>Assembly Rate: 3%</span>
+                  <span className={styles.detailItem}>Value: GH₵ 15,000</span>
+                  <span className={styles.detailItem}>Rate: 3%</span>
                 </div>
               </div>
               <div className={styles.paymentOptions}>
@@ -98,22 +94,16 @@ const PublicHomePage = () => {
                 </button>
               </div>
             </div>
-            <div className={styles.floatingElement1}></div>
-            <div className={styles.floatingElement2}></div>
-            <div className={styles.floatingElement3}></div>
           </div>
         </div>
       </section>
 
-      {/* Authentication Section - Ghana Card & Phone Verification */}
+      {/* How It Works */}
       <section className={styles.authSection}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>
-            Secure Ghana Card Verification
-          </h2>
+          <h2 className={styles.sectionTitle}>How It Works</h2>
           <p className={styles.sectionSubtitle}>
-            Your identity is protected with Ghana Card ID and phone number
-            verification
+            Simple steps to pay your property rates
           </p>
         </div>
         <div className={styles.authSteps}>
@@ -121,35 +111,31 @@ const PublicHomePage = () => {
             <div className={styles.stepNumber}>1</div>
             <div className={styles.stepContent}>
               <h3>Enter Ghana Card ID</h3>
-              <p>
-                Provide your Ghana Card identification number for verification
-              </p>
+              <p>Use your Ghana Card number to verify your identity</p>
             </div>
           </div>
           <div className={styles.authStep}>
             <div className={styles.stepNumber}>2</div>
             <div className={styles.stepContent}>
               <h3>Verify Phone Number</h3>
-              <p>Receive OTP on your registered mobile number</p>
+              <p>Get a code sent to your mobile number</p>
             </div>
           </div>
           <div className={styles.authStep}>
             <div className={styles.stepNumber}>3</div>
             <div className={styles.stepContent}>
-              <h3>Access Your Properties</h3>
-              <p>View and manage all your linked properties</p>
+              <h3>Pay & Get Receipt</h3>
+              <p>Choose payment method and get instant receipt</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Payment Methods Section - MVP Scope Only */}
+      {/* Payment Options */}
       <section className={styles.paymentSection}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Secure Payment Methods</h2>
-          <p className={styles.sectionSubtitle}>
-            Choose from verified payment channels available in Ghana
-          </p>
+          <h2 className={styles.sectionTitle}>Payment Methods</h2>
+          <p className={styles.sectionSubtitle}>Choose how you want to pay</p>
         </div>
         <div className={styles.paymentGrid}>
           <div className={styles.paymentCard}>
@@ -158,12 +144,11 @@ const PublicHomePage = () => {
             </div>
             <h3 className={styles.paymentTitle}>Mobile Money</h3>
             <p className={styles.paymentDescription}>
-              MTN Mobile Money & Vodafone Cash via Paystack
+              MTN Mobile Money and Vodafone Cash
             </p>
             <div className={styles.paymentFeatures}>
               <span className={styles.feature}>Instant</span>
               <span className={styles.feature}>Secure</span>
-              <span className={styles.feature}>24/7</span>
             </div>
           </div>
           <div className={styles.paymentCard}>
@@ -172,12 +157,11 @@ const PublicHomePage = () => {
             </div>
             <h3 className={styles.paymentTitle}>Bank Cards</h3>
             <p className={styles.paymentDescription}>
-              Visa & Mastercard payments secured by Paystack
+              Visa and Mastercard payments
             </p>
             <div className={styles.paymentFeatures}>
               <span className={styles.feature}>Fast</span>
               <span className={styles.feature}>Reliable</span>
-              <span className={styles.feature}>PCI-DSS</span>
             </div>
           </div>
           <div className={styles.paymentCard}>
@@ -186,23 +170,22 @@ const PublicHomePage = () => {
             </div>
             <h3 className={styles.paymentTitle}>Field Collector</h3>
             <p className={styles.paymentDescription}>
-              Pay authorized collectors with offline receipt generation
+              Pay authorized collectors in person
             </p>
             <div className={styles.paymentFeatures}>
               <span className={styles.feature}>Offline</span>
-              <span className={styles.feature}>Digital Receipt</span>
-              <span className={styles.feature}>Verified</span>
+              <span className={styles.feature}>Receipt</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Platform Features Section */}
-      <section className={styles.featuresSection} id="features">
+      {/* Features */}
+      <section className={styles.featuresSection}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Platform Features</h2>
+          <h2 className={styles.sectionTitle}>Why Choose RatePoint</h2>
           <p className={styles.sectionSubtitle}>
-            Designed for Ghana's municipal rate collection needs
+            Built for Ghana's property owners
           </p>
         </div>
         <div className={styles.featuresGrid}>
@@ -210,20 +193,18 @@ const PublicHomePage = () => {
             <div className={styles.featureIconWrapper}>
               <span className={styles.featureIcon}>📱</span>
             </div>
-            <h3 className={styles.featureTitle}>Mobile-First Design</h3>
+            <h3 className={styles.featureTitle}>Mobile Friendly</h3>
             <p className={styles.featureDescription}>
-              Optimized for iOS & Android devices, works on all smartphones
-              across Ghana
+              Works perfectly on all smartphones across Ghana
             </p>
           </div>
           <div className={styles.featureItem}>
             <div className={styles.featureIconWrapper}>
               <span className={styles.featureIcon}>🆔</span>
             </div>
-            <h3 className={styles.featureTitle}>Ghana Card Verification</h3>
+            <h3 className={styles.featureTitle}>Ghana Card Secure</h3>
             <p className={styles.featureDescription}>
-              Secure authentication using Ghana Card ID and phone number
-              verification
+              Your Ghana Card keeps everything safe and verified
             </p>
           </div>
           <div className={styles.featureItem}>
@@ -232,111 +213,53 @@ const PublicHomePage = () => {
             </div>
             <h3 className={styles.featureTitle}>Digital Receipts</h3>
             <p className={styles.featureDescription}>
-              Instant downloadable PDF receipts for all payments with secure
-              storage
+              Get PDF receipts instantly after payment
             </p>
           </div>
           <div className={styles.featureItem}>
             <div className={styles.featureIconWrapper}>
               <span className={styles.featureIcon}>🔔</span>
             </div>
-            <h3 className={styles.featureTitle}>Real-time Notifications</h3>
+            <h3 className={styles.featureTitle}>Payment Alerts</h3>
             <p className={styles.featureDescription}>
-              Push notifications and SMS alerts for bills and payment
-              confirmations
+              Get SMS and app notifications for bills and payments
             </p>
           </div>
           <div className={styles.featureItem}>
             <div className={styles.featureIconWrapper}>
               <span className={styles.featureIcon}>💬</span>
             </div>
-            <h3 className={styles.featureTitle}>Dedicated Support</h3>
+            <h3 className={styles.featureTitle}>Help Available</h3>
             <p className={styles.featureDescription}>
-              In-app chat and municipal support lines for assistance
+              Contact municipal support when you need help
             </p>
           </div>
           <div className={styles.featureItem}>
             <div className={styles.featureIconWrapper}>
               <span className={styles.featureIcon}>🏠</span>
             </div>
-            <h3 className={styles.featureTitle}>Property Management</h3>
+            <h3 className={styles.featureTitle}>Multiple Properties</h3>
             <p className={styles.featureDescription}>
-              Link multiple properties using Unique Property ID or phone number
+              Manage all your properties in one place
             </p>
           </div>
         </div>
       </section>
 
-      {/* How It Works Section - Aligned with User Stories */}
-      <section className={styles.worksSection} id="how-it-works">
-        <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>How RatePoint Works</h2>
-          <p className={styles.sectionSubtitle}>
-            Simple three-step process for property owners
-          </p>
-        </div>
-        <div className={styles.stepsContainer}>
-          <div className={styles.stepCard}>
-            <div className={styles.stepNumber}>01</div>
-            <div className={styles.stepContent}>
-              <h3 className={styles.stepTitle}>Verify with Ghana Card</h3>
-              <p className={styles.stepDescription}>
-                Sign up using your Ghana Card ID and phone number for secure
-                verification
-              </p>
-            </div>
-            <div className={styles.stepVisual}>
-              <span className={styles.stepIcon}>🆔</span>
-            </div>
-          </div>
-          <div className={styles.stepCard}>
-            <div className={styles.stepNumber}>02</div>
-            <div className={styles.stepContent}>
-              <h3 className={styles.stepTitle}>Find Your Property</h3>
-              <p className={styles.stepDescription}>
-                Search using Unique Property ID or link properties to your
-                account
-              </p>
-            </div>
-            <div className={styles.stepVisual}>
-              <span className={styles.stepIcon}>🔍</span>
-            </div>
-          </div>
-          <div className={styles.stepCard}>
-            <div className={styles.stepNumber}>03</div>
-            <div className={styles.stepContent}>
-              <h3 className={styles.stepTitle}>Pay & Get Receipt</h3>
-              <p className={styles.stepDescription}>
-                Choose Mobile Money or Card payment and receive instant digital
-                receipt
-              </p>
-            </div>
-            <div className={styles.stepVisual}>
-              <span className={styles.stepIcon}>🧾</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* For Field Collectors Section */}
+      {/* For Collectors */}
       <section className={styles.collectorSection}>
         <div className={styles.collectorContent}>
           <div className={styles.collectorText}>
             <h2>For Field Collectors</h2>
-            <p>
-              Offline-capable mobile app for property registration and payment
-              collection
-            </p>
+            <p>Mobile app for property registration and payment collection</p>
             <ul className={styles.collectorFeatures}>
-              <li>✅ Offline property registration with GPS</li>
-              <li>✅ Digital bill issuance with QR codes</li>
-              <li>✅ Offline payment recording</li>
-              <li>✅ Automatic sync when online</li>
-              <li>✅ Performance dashboard</li>
+              <li>Register properties with GPS location</li>
+              <li>Issue digital bills with QR codes</li>
+              <li>Record payments offline</li>
+              <li>Sync data when online</li>
+              <li>Track your collection performance</li>
             </ul>
-            <button className={styles.collectorCta}>
-              Download Collector App
-            </button>
+            <button className={styles.collectorCta}>Get Collector App</button>
           </div>
           <div className={styles.collectorVisual}>
             <div className={styles.collectorDevice}>
@@ -358,43 +281,13 @@ const PublicHomePage = () => {
                   <span>📊</span>
                   <span>View Performance</span>
                 </div>
-                <div className={styles.offlineBadge}>
-                  🔄 Offline Mode Active
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section - Pilot Metrics */}
-      <section className={styles.statsSection}>
-        <div className={styles.statsBackground}></div>
-        <div className={styles.statsContent}>
-          <div className={styles.statItem}>
-            <div className={styles.statNumber}>Pilot</div>
-            <div className={styles.statLabel}>Launch Ready</div>
-            <div className={styles.statSubtitle}>January 26th, 2026</div>
-          </div>
-          <div className={styles.statItem}>
-            <div className={styles.statNumber}>99.5%</div>
-            <div className={styles.statLabel}>Uptime SLA</div>
-            <div className={styles.statSubtitle}>Reliable Service</div>
-          </div>
-          <div className={styles.statItem}>
-            <div className={styles.statNumber}>100%</div>
-            <div className={styles.statLabel}>Secure</div>
-            <div className={styles.statSubtitle}>PCI-DSS Compliant</div>
-          </div>
-          <div className={styles.statItem}>
-            <div className={styles.statNumber}>24/7</div>
-            <div className={styles.statLabel}>Support</div>
-            <div className={styles.statSubtitle}>Always Available</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
+      {/* Final Call to Action */}
       <section className={styles.finalCta}>
         <div className={styles.ctaCard}>
           <div className={styles.ctaContent}>
@@ -402,28 +295,22 @@ const PublicHomePage = () => {
               Ready to Pay Your Property Rates?
             </h2>
             <p className={styles.ctaDescription}>
-              Join Ghana's digital transformation of municipal rate collection.
-              Fast, secure, and convenient payments powered by Ghana Card
-              verification.
+              Join thousands of Ghanaians using RatePoint for fast, secure
+              property rate payments. No more long queues or paperwork.
             </p>
             <div className={styles.ctaButtons}>
               <button className={styles.ctaPrimary}>
                 Download Citizen App
                 <span className={styles.ctaArrow}>→</span>
               </button>
-              <button className={styles.ctaSecondary}>
-                Municipal Admin Portal
-              </button>
+              <button className={styles.ctaSecondary}>Municipal Portal</button>
             </div>
-          </div>
-          <div className={styles.ctaVisual}>
-            <div className={styles.ctaOrb}></div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className={styles.footer} id="support">
+      <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.footerMain}>
             <div className={styles.footerBrand}>
@@ -432,39 +319,21 @@ const PublicHomePage = () => {
                 <span className={styles.logoText}>RatePoint</span>
               </div>
               <p className={styles.footerDescription}>
-                Ghana's trusted digital platform for municipal property rate
-                collection. Making tax compliance simple and accessible for all
-                citizens.
+                Ghana's digital platform for municipal property rate collection.
+                Making tax compliance simple for everyone.
               </p>
-              <div className={styles.socialLinks}>
-                <a href="#" className={styles.socialLink}>
-                  📘
-                </a>
-                <a href="#" className={styles.socialLink}>
-                  📷
-                </a>
-                <a href="#" className={styles.socialLink}>
-                  🐦
-                </a>
-                <a href="#" className={styles.socialLink}>
-                  💼
-                </a>
-              </div>
             </div>
             <div className={styles.footerLinks}>
               <div className={styles.linkGroup}>
                 <h4 className={styles.linkTitle}>Platform</h4>
-                <a href="#features" className={styles.link}>
+                <a href="#" className={styles.link}>
                   Features
                 </a>
-                <a href="#how-it-works" className={styles.link}>
+                <a href="#" className={styles.link}>
                   How It Works
                 </a>
                 <a href="#" className={styles.link}>
                   Payment Methods
-                </a>
-                <a href="#" className={styles.link}>
-                  Security
                 </a>
               </div>
               <div className={styles.linkGroup}>
@@ -473,10 +342,7 @@ const PublicHomePage = () => {
                   Help Center
                 </a>
                 <a href="#" className={styles.link}>
-                  Contact Municipal Office
-                </a>
-                <a href="#" className={styles.link}>
-                  FAQ
+                  Contact Office
                 </a>
                 <a href="#" className={styles.link}>
                   App Download
@@ -491,10 +357,7 @@ const PublicHomePage = () => {
                   Terms of Service
                 </a>
                 <a href="#" className={styles.link}>
-                  Data Protection Act
-                </a>
-                <a href="#" className={styles.link}>
-                  PCI-DSS Compliance
+                  Data Protection
                 </a>
               </div>
             </div>
@@ -513,17 +376,10 @@ const PublicHomePage = () => {
             <div className={styles.contactItem}>
               <span className={styles.contactIcon}>📞</span>
               <div>
-                <div className={styles.contactLabel}>Municipal Help Line</div>
+                <div className={styles.contactLabel}>Help Line</div>
                 <div className={styles.contactValue}>
                   Contact Local Assembly
                 </div>
-              </div>
-            </div>
-            <div className={styles.contactItem}>
-              <span className={styles.contactIcon}>🏛️</span>
-              <div>
-                <div className={styles.contactLabel}>Pilot Launch</div>
-                <div className={styles.contactValue}>January 26th, 2026</div>
               </div>
             </div>
           </div>
@@ -533,17 +389,6 @@ const PublicHomePage = () => {
             &copy; 2024 RatePoint - A 1st Son Corporations Platform. All rights
             reserved.
           </p>
-          <div className={styles.legalLinks}>
-            <a href="#" className={styles.legalLink}>
-              Privacy
-            </a>
-            <a href="#" className={styles.legalLink}>
-              Terms
-            </a>
-            <a href="#" className={styles.legalLink}>
-              Data Protection
-            </a>
-          </div>
         </div>
       </footer>
     </div>

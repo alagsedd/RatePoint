@@ -1,0 +1,340 @@
+.errorPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f4f0 0%, #f0e6d8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.errorContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+/* Error Illustration */
+.errorIllustration {
+  text-align: center;
+  position: relative;
+}
+
+.errorNumber {
+  font-size: 8rem;
+  font-weight: 900;
+  color: #8B4513;
+  opacity: 0.1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.errorImage {
+  position: relative;
+  z-index: 2;
+}
+
+.placeholderImage {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(139, 69, 19, 0.2);
+  border: 8px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Error Message */
+.errorMessage {
+  padding: 2rem 0;
+}
+
+.errorTitle {
+  font-size: 3rem;
+  color: #2c1810;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.errorDescription {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.errorDetails {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #8B4513;
+  margin-bottom: 2rem;
+}
+
+.errorDetails p {
+  font-weight: 600;
+  color: #2c1810;
+  margin-bottom: 1rem;
+}
+
+.suggestionsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestionsList li {
+  padding: 0.5rem 0;
+  color: #666;
+  position: relative;
+  padding-left: 1rem;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.primaryButton, .secondaryButton, .backButton {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: white;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(139, 69, 19, 0.3);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #8B4513;
+  border: 2px solid #8B4513;
+}
+
+.secondaryButton:hover {
+  background: #8B4513;
+  color: white;
+}
+
+.backButton {
+  background: rgba(139, 69, 19, 0.1);
+  color: #8B4513;
+}
+
+.backButton:hover {
+  background: rgba(139, 69, 19, 0.2);
+}
+
+/* Cultural Quote */
+.culturalQuote {
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.culturalQuote::before {
+  content: '"';
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: -2rem;
+  left: 1rem;
+  font-family: serif;
+}
+
+.culturalQuote blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.culturalQuote cite {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-style: normal;
+}
+
+/* Quick Navigation */
+.quickNav {
+  text-align: center;
+  padding: 3rem 0;
+  border-top: 2px solid rgba(139, 69, 19, 0.1);
+}
+
+.quickNav h3 {
+  color: #2c1810;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.navGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.navCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #2c1810;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navCard:hover {
+  transform: translateY(-5px);
+  border-color: #8B4513;
+  box-shadow: 0 10px 25px rgba(139, 69, 19, 0.2);
+}
+
+.navIcon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+  .errorContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .errorNumber {
+    font-size: 6rem;
+  }
+
+  .placeholderImage {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .errorTitle {
+    font-size: 2.5rem;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryButton, .secondaryButton, .backButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .errorTitle {
+    font-size: 2rem;
+  }
+
+  .errorNumber {
+    font-size: 4rem;
+  }
+
+  .placeholderImage {
+    width: 200px;
+    height: 200px;
+    font-size: 1rem;
+  }
+
+  .culturalQuote blockquote {
+    font-size: 1.1rem;
+  }
+
+  .navGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .errorDescription {
+    font-size: 1.1rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.errorContent {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.errorIllustration {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.errorMessage {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.quickNav {
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}

@@ -1,0 +1,571 @@
+.aboutPage {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.heroSection {
+  display: flex;
+  align-items: center;
+  min-height: 60vh;
+  background: linear-gradient(135deg, #f8f4f0 0%, #f0e6d8 100%);
+  padding: 2rem 0;
+}
+
+.heroContent {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #8B4513;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.heroImage {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.placeholderHero {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Introduction Section */
+.introSection {
+  padding: 4rem 0;
+  background: white;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.introText h2 {
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 1.5rem;
+}
+
+.introText p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statNumber {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #8B4513;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.placeholderImage {
+  width: 100%;
+  height: 400px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Queen Mother Section */
+.queenMotherSection {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: white;
+}
+
+.queenMotherGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.placeholderQueen {
+  width: 100%;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+}
+
+.queenMotherContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.queenMotherContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.queenMotherContent p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.leadershipHighlights {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.highlight:last-child {
+  margin-bottom: 0;
+}
+
+.contactButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: white;
+  color: #8B4513;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* History Timeline */
+.historySection {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.historySection h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #8B4513;
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timelineItem:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.timelineYear {
+  flex: 0 0 120px;
+  text-align: center;
+  background: #8B4513;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.timelineContent {
+  flex: 1;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 2rem;
+  position: relative;
+}
+
+.timelineContent h3 {
+  color: #8B4513;
+  margin-bottom: 0.5rem;
+}
+
+.timelineContent p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Values Section */
+.valuesSection {
+  padding: 4rem 0;
+  background: white;
+}
+
+.valuesSection h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 3rem;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.valueCard {
+  text-align: center;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+}
+
+.valueIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.valueCard h3 {
+  color: #8B4513;
+  margin-bottom: 1rem;
+}
+
+.valueCard p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Festivals Section */
+.festivalsSection {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8f4f0 0%, #f0e6d8 100%);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 1rem;
+}
+
+.sectionHeader p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.festivalsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.festivalCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.festivalCard h3 {
+  color: #8B4513;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.festivalPeriod {
+  background: #8B4513;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.festivalCard p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.placeholderFestival {
+  width: 100%;
+  height: 200px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #666;
+}
+
+/* Governance Section */
+.governanceSection {
+  padding: 4rem 0;
+  background: white;
+}
+
+.governanceSection h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 3rem;
+}
+
+.governanceContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.governanceText p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.governanceList {
+  list-style: none;
+  padding: 0;
+}
+
+.governanceList li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  color: #666;
+}
+
+.governanceList li:last-child {
+  border-bottom: none;
+}
+
+.placeholderGovernance {
+  width: 100%;
+  height: 400px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: #666;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: white;
+  text-align: center;
+}
+
+.ctaContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton, .secondaryButton {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.primaryButton {
+  background: white;
+  color: #8B4513;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.secondaryButton:hover {
+  background: white;
+  color: #8B4513;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+  .heroSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .introGrid,
+  .queenMotherGrid,
+  .governanceContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timelineItem {
+    flex-direction: row !important;
+    align-items: flex-start;
+  }
+
+  .timelineYear {
+    flex: 0 0 80px;
+    margin-right: 1rem;
+  }
+
+  .timelineContent {
+    margin: 0;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryButton, .secondaryButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .festivalsGrid {
+    grid-template-columns: 1fr;
+  }
+}
